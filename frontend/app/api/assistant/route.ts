@@ -66,7 +66,7 @@ export async function POST(request: Request) {
 
     const fullPrompt = `${SYSTEM_PROMPT}\n\n${langInstruction}\n\nCONTEXT:\n${contextStr}\n\nFarmer's Question: ${question}`;
 
-    const modelCandidates = ["gemini-3.6-flash", "gemini-flash-latest", "gemini-3.5-flash", "gemini-2.5-flash-lite"];
+    const modelCandidates = ["gemini-2.5-flash", "gemini-2.0-flash", "gemini-1.5-flash", "gemini-flash-latest", "gemini-3.6-flash", "gemini-3.5-flash", "gemini-2.5-flash-lite"];
 
     for (const modelName of modelCandidates) {
       try {
