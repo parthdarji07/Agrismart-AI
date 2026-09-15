@@ -176,6 +176,13 @@ cp .env.example .env
 # Optional: Add GEMINI_API_KEY in .env for Gemini AI integration
 ```
 
+## AI Farmer Assistant Setup (Optional)
+The assistant works without any API key using a rule-based offline fallback.
+For full Gemini-powered responses:
+1. Get a free API key at https://aistudio.google.com/apikey (takes ~1 min, free tier available)
+2. Add it to your local `.env` as GEMINI_API_KEY=your_key_here
+3. Restart the backend
+
 ### 3. Launch the Complete Application
 
 Run the unified runner script to start both the FastAPI backend and Next.js frontend:
@@ -200,11 +207,8 @@ python run.py
 | `/api/irrigation` | `POST` | Smart irrigation scheduler based on FAO-56 Penman-Monteith |
 | `/api/sustainability` | `POST` | ESG sustainability score calculation engine |
 | `/api/assistant` | `POST` | AI Agronomist Chat endpoint (Gemini AI + rule fallback) |
-| `/api/iot/sensors` | `GET` | Real-time simulated IoT sensor telemetry |
-| `/api/iot/history` | `GET` | Historical IoT sensor trend data |
 | `/api/auth/signup` | `POST` | Farmer account registration (PBKDF2 salted hash) |
 | `/api/auth/login` | `POST` | Farmer authentication & JWT issuance |
-| `/api/scans` | `GET` / `POST` | Saved diagnosis history & farm tracking |
 | `/api/health` | `GET` | Service status check |
 
 ---

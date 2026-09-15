@@ -250,7 +250,7 @@ async def _call_gemini(question: str, context: dict, language: str) -> Optional[
     """Call Gemini API with structured context and enforce strict safety rules."""
     api_key = os.getenv("GEMINI_API_KEY")
     if not api_key:
-        return None  # Trigger fallback
+        return None  # Trigger rule-based fallback
     
     context_str = _format_context(context)
     lang_instruction = LANGUAGE_INSTRUCTIONS.get(language, LANGUAGE_INSTRUCTIONS["english"])
