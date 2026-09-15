@@ -298,9 +298,9 @@ export default function AssistantPage() {
               </button>
             </div>
 
-            <div className="mt-8 text-lg sm:text-xl font-bold leading-relaxed text-white/95 whitespace-pre-line">
+            <div className="mt-8 text-lg sm:text-xl font-bold leading-relaxed text-white/95">
               {assistantData?.answer || assistantData?.voice_script || insights?.plain_language_explanation || (
-                "Click 'Explain My Field' or ask a question above to receive grounded advice in English, Hindi, or Gujarati."
+                "Click 'Explain My Field' or ask a question above to receive grounded voice advice in English, Hindi, or Gujarati."
               )}
             </div>
           </div>
